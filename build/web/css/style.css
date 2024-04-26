@@ -1,0 +1,360 @@
+:root {
+    --width-bo: 80%;
+    --margin-bo: 20px auto;
+}
+
+@media (max-width: 1000px) {
+    :root {
+        --width-bo: 100%;
+        --margin-bo: 20px auto;
+    }
+}
+
+body {
+    background: #f3f3f3;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.none {
+    display: none;
+}
+
+/**Header**/
+.header {
+    display: grid;
+}
+
+.header .head1 {
+    padding: 15px 100px;
+    background: #222222;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .head1 .logo img {
+    width: 100px;
+}
+
+.header .info {
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    align-content: center;
+    padding: 20px 0;
+}
+
+.header .info div {
+    cursor: pointer;
+}
+
+.header .info div:hover {
+    color: #f10e34;
+}
+
+.header .info div:active {
+    color: #33cc33;
+}
+
+.header .head2 {
+    background: #33cc33;
+}
+
+.header .head2 .search {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.header .head2 .search input {
+    width: 500px;
+    padding: 5px;
+    border-start-start-radius: 5px;
+    border-end-start-radius: 5px;
+    border: none;
+}
+
+.header .head2 .search button {
+    padding: 5px 20px;
+    border-end-end-radius: 5px;
+    border-start-end-radius: 5px;
+    border: none;
+    background: #f10e34;
+    color: white;
+}
+
+.header .head3 .cates ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: #e6f9e6;
+    text-align: center;
+}
+
+.header .head3 .cates li {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.header .head3 .cates li:hover {
+    color: #f10e34;
+}
+
+.header .head3 .cates li:active {
+    color: #33cc33;
+}
+
+
+/**Footer***/
+.footer {
+    padding: 20px 100px;
+    background: #222222;
+    color: white;
+    display: grid;
+}
+
+.footer .title {
+    text-align: center;
+}
+
+.footer .title p {
+    font-style: oblique;
+}
+
+.footer .content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .content .info {
+    width: 30%;
+}
+
+.footer .content .send {
+    width: 50%;
+    display: grid;
+    gap: 10px;
+}
+
+.footer .content .send .up {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer .content .send .up #nameF {
+    width: 45%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer .content .send .up #emailF {
+    width: 45%;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.footer .content .send .down #commentF {
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+    min-height: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+}
+
+.footer .content .send .down button {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #f10e34;
+    color: white;
+    font-weight: 500;
+}
+
+/***tableAd***/
+.tableAd table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin: auto;
+}
+
+.tableAd td,
+th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+.tableAd tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.tableAd button {
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+}
+
+.tableAd td+.active {
+    color: #33cc33;
+}
+
+.tableAd td+.inactive,
+.tableAd td+.remove {
+    color: #f10e34;
+}
+
+.tableAd button+.inactive,
+.tableAd .remove,
+.tableAd .cancel {
+    background: #f10e34;
+}
+
+.tableAd .fix {
+    background: rgb(104, 187, 188)
+}
+
+.tableAd .detail {
+    background: #5733cc;
+}
+
+.tableAd button+.active, .tableAd .confirm {
+    background: #33cc33;
+}
+
+/***home***/
+.home {
+    margin: var(--margin-bo);
+    width: var(--width-bo);
+    min-height: 50vh;
+}
+
+.home .banner img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.home .banner .slick-arrow {
+    display: none !important;
+    position: absolute;
+    top: 45%;
+    z-index: 100;
+    border: none;
+    color: #bababa;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 25px;
+}
+
+.home .banner .slick-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.home .banner .slick-prev {
+    left: 0;
+}
+
+.home .banner .slick-next {
+    right: 0;
+}
+
+.home .banner:hover>.slick-arrow {
+    display: block !important;
+}
+
+/***input[type=number]***/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input {
+    border: 2px solid #ddd;
+    display: inline-flex;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+
+.number-input button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+}
+
+.number-input input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    font-family: sans-serif;
+    max-width: 50px;
+    padding: 5px;
+    border: solid #ddd;
+    border-width: 0 2px;
+    font-size: 20px;
+    height: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*.profile, .login, .register {
+    padding: 20px 0;
+}*/
+
+.profile .avatar img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/***banners***/
+.bannerAd {
+    margin-bottom: 35px;
+}
+
+.bannerAd .listBanner img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+/***Ratings***************/
+.rating {
+    margin-top: 10px;
+}
+.rating label {
+    float: right;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.rating label:before {
+    content: "\2605";
+    font-size: 22px;
+    color: #ccc;
+    line-height: 1;
+}
+.rating input {
+    display: none;
+}
+.rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+    color: #f9df4a;
+}
